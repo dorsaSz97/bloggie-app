@@ -1,0 +1,15 @@
+.indicators {
+  gap: 10px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sliderContainer > div {
+  width: 100%;
+}
+
+.react-slideshow-container {
+  width: 100%;
+}
