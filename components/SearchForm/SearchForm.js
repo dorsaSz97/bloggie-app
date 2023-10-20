@@ -18,7 +18,10 @@ const SearchForm = () => {
   };
 
   return (
-    <form onSubmit={searchSubmitHandler} className="w-1/3">
+    <form
+      onSubmit={searchSubmitHandler}
+      className="md:w-1/2 md:self-start lg:w-1/3 w-full"
+    >
       <input
         type="text"
         placeholder="Search..."

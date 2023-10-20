@@ -12,7 +12,7 @@ const Categories = ({ categories }) => {
     'flex items-center justify-center h-full w-full py-2 px-4';
 
   return (
-    <ul className="flex items-center gap-3 text-customText font-medium capitalize">
+    <ul className="flex items-center gap-3 text-customText font-medium capitalize overflow-y-scroll w-full">
       <li
         className={`rounded-full 
           ${!currCategory ? activeClasses : inactiveClasses}`}

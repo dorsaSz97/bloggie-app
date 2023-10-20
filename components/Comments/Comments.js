@@ -36,7 +36,7 @@ const Comments = ({ isCommentsShown, comments, slug }) => {
 
   return (
     <>
-      <ul className="w-1/2 mx-auto mb-8">
+      <ul className="w-[90%] md:w-3/4 lg:w-1/2 mx-auto mb-8">
         {isCommentsShown &&
           comments &&
           comments.length !== 0 &&
@@ -56,7 +56,7 @@ const Comments = ({ isCommentsShown, comments, slug }) => {
       {isCommentsShown && (
         <form
           onSubmit={commentSubmitHandler}
-          className="w-1/2 max-w-5xl mx-auto flex flex-col gap-5 text-customLight"
+          className="w-[90%] md:w-3/4 lg:w-1/2 max-w-5xl mx-auto flex flex-col gap-5 text-customLight"
         >
           <input
             type="text"

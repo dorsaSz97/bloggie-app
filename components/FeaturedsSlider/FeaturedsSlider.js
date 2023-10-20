@@ -10,7 +10,7 @@ const indicators = () => (
 
 const FeaturedsSlider = ({ featuredPosts }) => {
   return (
-    <section className="relative mx-auto rounded-[70px] overflow-hidden w-[1312px] sliderContainer">
+    <section className="relative mx-auto rounded-[70px] overflow-hidden w-full sliderContainer">
       <Slide indicators={indicators} arrows={false} autoplay={true}>
         {featuredPosts.map(ftPost => {
           return (
@@ -20,7 +20,7 @@ const FeaturedsSlider = ({ featuredPosts }) => {
             >
               <a className="block w-full h-full">
                 <article
-                  className="relative flex flex-col gap-5 h-[380px] w-full p-10 text-center w-[1312px] text-customLight"
+                  className="relative flex flex-col gap-5 h-[380px] w-full p-10 text-center text-customLight"
                   style={{
                     backgroundImage: `url(${ftPost.photo.url})`,
                     backgroundSize: 'cover',
@@ -30,7 +30,7 @@ const FeaturedsSlider = ({ featuredPosts }) => {
                   <h3 className="relative text-3xl font-bold capitalize z-5">
                     {ftPost.title}
                   </h3>
-                  <p className="relative text-lg capitalize z-5">
+                  <p className="relative text-md md:text-lg capitalize z-5">
                     {ftPost.shortDesc}
                   </p>
                 </article>

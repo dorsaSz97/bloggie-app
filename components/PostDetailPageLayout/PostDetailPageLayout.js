@@ -31,7 +31,7 @@ const PostDetailPageLayout = ({ post }) => {
       >
         <BackIcon />
       </button>
-      <div className="flex gap-10 max-w-5xl mx-auto">
+      <div className="flex flex-col md:flex-row gap-6 md:gap-10  max-w-5xl mx-auto">
         <figure className="flex-1 h-[500px]">
           <img
             src={post.photo.url}
@@ -39,8 +39,10 @@ const PostDetailPageLayout = ({ post }) => {
             className="h-full w-full object-cover"
           />
         </figure>
-        <div className="flex-1 flex flex-col">
-          <h2 className="mb-10 text-5xl">{post.title}</h2>
+        <div className="flex-1 flex flex-col gap-3 ">
+          <h2 className="mb-10 text-3xl md:text-4xl lg:text-5xl">
+            {post.title}
+          </h2>
 
           <p className="text-lg text-customLight opacity-75">
             {post.shortDesc}
@@ -56,7 +58,7 @@ const PostDetailPageLayout = ({ post }) => {
         </div>
       </div>
       <div className="py-10">
-        <div className="mx-auto max-w-5xl text-justify leading-10 opacity-82 text-[20px] tracking-wider">
+        <div className="mx-auto max-w-5xl text-justify leading-8 md:leading-10 opacity-82 text-[20px] tracking-wider">
           {parse(post.fullDesc.html, {
             replace: domNode => {
               if (domNode.name === 'p' && domNode.children.length === 0) {

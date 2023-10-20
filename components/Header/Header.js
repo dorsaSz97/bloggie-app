@@ -3,7 +3,7 @@ import Navbar from '../Navbar';
 
 const Header = () => {
   return (
-    <header className="flex justify-between">
+    <header className="flex justify-between items-center">
       <Logo />
       <Navbar />
     </header>

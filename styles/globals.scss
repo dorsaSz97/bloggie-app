@@ -36,7 +36,13 @@
 
 body {
   background-color: #141414;
-  padding: 2rem 4rem;
+  padding: 1rem 2rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 2rem 4rem;
+  }
 }
 
 ul {
@@ -45,4 +51,12 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.menu {
+  @apply bg-customLight bg-opacity-40 text-customBlack flex-row w-full;
+}
+
+.nav-item a {
+  text-wrap: nowrap;
 }
