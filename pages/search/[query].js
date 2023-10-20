@@ -1,12 +1,13 @@
+// /search/---
+
 import {
   getSearchedPosts,
   getCategories,
   getFeaturedPosts,
 } from '../../helpers';
-
 import HomeLayout from '../../components/HomeLayout/HomeLayout';
 
-const SearchedPostsPage = ({ posts, categories, featuredPosts }) => {
+const SearchedPostsPage = ({ categories, featuredPosts, posts }) => {
   // if the search page wasnt separate and we didnt want the specific url for the users to pass around and be able to access the same page, we could use api/search?{searchQ} and do the filtering in the api folder
   return (
     <HomeLayout

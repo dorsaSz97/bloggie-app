@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useRef, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import parse from 'html-react-parser';
 import useSWR from 'swr';
-import { getComments } from '../../helpers';
 
+import { getComments } from '../../helpers';
 import BackIcon from '../Icons/BackIcon';
 import Comments from '../Comments';
 

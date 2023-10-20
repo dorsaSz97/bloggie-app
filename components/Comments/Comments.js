@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Comments = ({ isCommentsShown, comments, slug }) => {
   const [messageInput, setMessageInput] = useState('');
   const [nameInput, setNameInput] = useState('');
   const [emailInput, setEmailInput] = useState('');
+  const [isBeingSent, setIsBeingSent] = useState(false);
 
   const commentSubmitHandler = e => {
     e.preventDefault();
+
+    setIsBeingSent(true);
 
     if (messageInput && nameInput && emailInput) {
       fetch('/api/comments', {
@@ -27,6 +30,8 @@ const Comments = ({ isCommentsShown, comments, slug }) => {
         setEmailInput('');
       });
     }
+
+    setIsBeingSent(false);
   };
 
   return (
@@ -77,7 +82,14 @@ const Comments = ({ isCommentsShown, comments, slug }) => {
             required
           />
 
-          <button className="text-customLight border-2 border-customBlue rounded-full p-2">
+          <button
+            disabled={
+              !messageInput || !nameInput || !emailInput || isBeingSent
+                ? true
+                : false
+            }
+            className="text-customLight border-2 border-customBlue rounded-full p-2 disabled:border-customLight disabled:opacity-25"
+          >
             Send
           </button>
         </form>

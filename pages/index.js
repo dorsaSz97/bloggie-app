@@ -1,6 +1,7 @@
-import { getHomePageData } from '../helpers';
+// /
 
-import HomeLayout from '../components/HomeLayout/index';
+import { getHomePageData } from '../helpers';
+import HomeLayout from '../components/HomeLayout';
 
 const HomePage = ({ categories, featuredPosts, posts }) => {
   return (
@@ -26,6 +27,6 @@ export async function getStaticProps() {
       featuredPosts,
       posts,
     },
-    revalidate: 3600, // update posts every TODO:check it after deployment
+    revalidate: 3600, // update posts every hour
   };
 }

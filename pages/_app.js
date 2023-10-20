@@ -1,3 +1,6 @@
+// this is used to initialize all other pages
+// shared layouts go here
+
 import Head from 'next/head';
 
 import '../styles/globals.scss';
@@ -7,14 +10,13 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="A website full of articles. Somewhere you can spend all your time reading"
+          content="A website full of articles. Somewhere you could spend all your time reading"
         />
         <title>Bloggie</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* this is the active page and the props are initial props object passed to the page component (params and all that) */}
       <Component {...pageProps} />
     </>
   );

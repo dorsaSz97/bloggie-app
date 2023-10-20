@@ -1,5 +1,8 @@
 import { request, gql } from 'graphql-request';
 
+const URL =
+  'https://api-eu-central-1.hygraph.com/v2/cl73fkilu3flp01uo2tn4hssc/master';
+
 export const getHomePageData = async () => {
   const query = gql`
     query HomePageData {
@@ -29,10 +32,7 @@ export const getHomePageData = async () => {
     }
   `;
 
-  const data = await request(
-    'https://api-eu-central-1.hygraph.com/v2/cl73fkilu3flp01uo2tn4hssc/master',
-    query
-  );
+  const data = await request(URL, query);
 
   return data;
 };
@@ -47,10 +47,7 @@ export const getCategories = async () => {
     }
   `;
 
-  const data = await request(
-    'https://api-eu-central-1.hygraph.com/v2/cl73fkilu3flp01uo2tn4hssc/master',
-    query
-  );
+  const data = await request(URL, query);
 
   return data.categories;
 };
@@ -84,11 +81,7 @@ export const getCategorizedPosts = async selectedCategory => {
     }
   `;
 
-  const data = await request(
-    'https://api-eu-central-1.hygraph.com/v2/cl73fkilu3flp01uo2tn4hssc/master',
-    query,
-    variables
-  );
+  const data = await request(URL, query, variables);
 
   return data.posts;
 };
@@ -110,10 +103,7 @@ export const getFeaturedPosts = async () => {
     }
   `;
 
-  const data = await request(
-    'https://api-eu-central-1.hygraph.com/v2/cl73fkilu3flp01uo2tn4hssc/master',
-    query
-  );
+  const data = await request(URL, query);
 
   return data.posts;
 };
@@ -147,11 +137,7 @@ export const getSearchedPosts = async searchQ => {
     }
   `;
 
-  const data = await request(
-    'https://api-eu-central-1.hygraph.com/v2/cl73fkilu3flp01uo2tn4hssc/master',
-    query,
-    variables
-  );
+  const data = await request(URL, query, variables);
 
   return data.posts;
 };
@@ -187,11 +173,7 @@ export const getSinglePost = async postSlug => {
     }
   `;
 
-  const data = await request(
-    'https://api-eu-central-1.hygraph.com/v2/cl73fkilu3flp01uo2tn4hssc/master',
-    query,
-    variables
-  );
+  const data = await request(URL, query, variables);
 
   return data.post;
 };
@@ -207,6 +189,7 @@ export const submitComment = async commentObj => {
 
   return data.json();
 };
+
 export const getComments = async slug => {
   const variables = { slug };
 
@@ -219,11 +202,7 @@ export const getComments = async slug => {
     }
   `;
 
-  const data = await request(
-    'https://api-eu-central-1.hygraph.com/v2/cl73fkilu3flp01uo2tn4hssc/master',
-    query,
-    variables
-  );
+  const data = await request(URL, query, variables);
 
   return data.comments;
 };
