@@ -1,12 +1,17 @@
-# Blog App (not responsive)
+# Blog App
 
-This is a blog app, coded with Nextjs and tailwind + graphcms.
+This blog app is coded with NextJS and Tailwind + GraphCMS(hygraph).
 
-You can add comments (they'll be shown after getting accepted in the graphcms), sort articles by category, search for specific articles and read them.
+## You can:
+
+- Add comments under the posts and they'll be shown after being accepted by the admin (me😁)
+- Sort the visible articles by category
+- Search for specific articles
 
 ## Screenshots
 
-<img src="public/sc.png" width="100%" height="100%"/>
+<img src="public/sc1.png" width="100%" height="100%"/>
+<img src="public/sc2.png" width="100%" height="100%"/>
 
 ## Get started
 
@@ -24,7 +29,7 @@ npm run dev
 
 ## Built with
 
-- Nextjs
+- NextJS
 - Tailwind
 - GraphQL
-- GraphCMS
+- GraphCMS(hygraph)
